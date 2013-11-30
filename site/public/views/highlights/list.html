@@ -1,0 +1,12 @@
+<section data-ng-controller="HighlightsController" data-ng-init="find()">
+
+	<ul class="book-highlights">
+        <li data-ng-repeat="highlight in highlights">
+            <h2>{{highlight.title}}</h2>
+            <p>{{highlight.content}}</p>
+            <p>{{highlight.location}}</p>
+        </li>
+    </ul>
+
+	<h1 data-ng-hide="!books || books.length">No highlights yet. <br> <a href="/#!/highlights/fetch">Fetch highlights</a>
+</section>

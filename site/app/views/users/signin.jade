@@ -1,0 +1,14 @@
+extends auth
+
+block auth
+  form.form-signin(action="/users/session", method="post")
+    p.error= message
+    h2.form-signin-heading Sign in  
+    input.form-control#email(type='text', name="email", placeholder='Email', required, autofocus)
+    input.form-control#password(type='password', name="password", required)
+    label.checkbox
+      input(type="checkbox", value="remember-me") 
+      p Remember me
+    button.btn.btn-lg.btn-primary.btn-block(type='submit') Sign in
+    p Don't have an account? 
+      a.show-signup(href="/signup") Sign up
